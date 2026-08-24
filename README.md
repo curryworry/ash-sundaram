@@ -15,6 +15,10 @@ npm run preview
 
 Blog posts live in `src/content/blog/`. Images used by migrated posts live in `public/images/`.
 
+## CMS
+
+Sveltia CMS is served from `/admin/`. Sign in with a GitHub personal access token that has read/write Contents access for this repository.
+
 ## Cloudflare Pages
 
 Use these build settings:
