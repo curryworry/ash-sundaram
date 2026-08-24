@@ -3,8 +3,8 @@ backend:
   repo: curryworry/ash-sundaram
   branch: main
 
-site_url: https://ashsundaram.com
-display_url: https://ashsundaram.com
+site_url: https://ash-sundaram.pages.dev
+display_url: https://ash-sundaram.pages.dev
 logo_url: /favicon.svg
 
 media_folder: public/images
