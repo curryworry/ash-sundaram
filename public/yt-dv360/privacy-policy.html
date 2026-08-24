@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DV360 Channel Analyzer</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning-box {
+            background: #fff9e6;
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .contact-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: center;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h1>Privacy Policy</h1>
+        <div class="meta">
+            <strong>Last Updated:</strong> January 13, 2026<br>
+            <strong>Effective Date:</strong> January 13, 2026
+        </div>
+
+        <div class="highlight-box">
+            <strong>Summary:</strong> DV360 YouTube Channel Analyzer is a business automation tool that processes DV360 advertising reports to ensure COPPA compliance. We only access emails containing DV360 reports, use publicly available YouTube data, and do not collect or share personal information.
+        </div>
+
+        <h2>Overview</h2>
+        <p>DV360 YouTube Channel Analyzer is an automation tool developed and operated by Acquire NZ for analyzing YouTube channel placements from Display & Video 360 (DV360) advertising reports.</p>
+
+        <h2>Application Purpose</h2>
+        <p>This application is designed for business use to:</p>
+        <ul>
+            <li>Process DV360 placement reports received via email</li>
+            <li>Analyze YouTube channel content for COPPA compliance and brand safety</li>
+            <li>Generate categorized channel lists for advertising campaign management</li>
+            <li>Automate weekly reporting workflows</li>
+        </ul>
+
+        <h2>Data Collection and Usage</h2>
+
+        <h3>Gmail API Access</h3>
+        <p><strong>What We Access:</strong></p>
+        <ul>
+            <li>Emails sent to authorized users with the subject "YouTube Placement Check - DV360"</li>
+            <li>ZIP file attachments containing DV360 placement reports (CSV files)</li>
+        </ul>
+
+        <p><strong>How We Use It:</strong></p>
+        <ul>
+            <li>Search for and download DV360 placement reports from email attachments</li>
+            <li>Extract YouTube channel URLs from CSV files</li>
+            <li>Send automated result emails with analysis summaries and download links</li>
+        </ul>
+
+        <p><strong>Data Retention:</strong></p>
+        <ul>
+            <li>Email attachments are temporarily stored during processing (less than 60 minutes)</li>
+            <li>Temporary files are automatically deleted after analysis completes</li>
+            <li>No email content is permanently stored</li>
+            <li>Only extracted YouTube channel URLs are cached for future reference</li>
+        </ul>
+
+        <h3>YouTube Data API Access</h3>
+        <p><strong>What We Access:</strong></p>
+        <ul>
+            <li>Public channel metadata (channel name, description, subscriber count)</li>
+            <li>Public video titles and descriptions</li>
+            <li>Publicly available channel statistics</li>
+        </ul>
+
+        <p><strong>How We Use It:</strong></p>
+        <ul>
+            <li>Retrieve channel details for content categorization</li>
+            <li>Analyze publicly available information to assess COPPA compliance and brand safety</li>
+            <li>No private or restricted data is accessed</li>
+        </ul>
+
+        <p><strong>Data Retention:</strong></p>
+        <ul>
+            <li>Channel metadata is cached in Google Cloud Firestore to reduce API costs</li>
+            <li>Only channel URL, name, and categorization results are stored</li>
+            <li>No private or personal user data is collected</li>
+        </ul>
+
+        <h3>OpenAI API Usage</h3>
+        <p><strong>What We Share:</strong></p>
+        <ul>
+            <li>YouTube channel names and descriptions (publicly available data only)</li>
+            <li>Channel video titles (publicly available data only)</li>
+            <li>No personal information or private data</li>
+        </ul>
+
+        <p><strong>How We Use It:</strong></p>
+        <ul>
+            <li>Automated content categorization using GPT-4 AI model</li>
+            <li>Brand safety assessment based on publicly available content</li>
+            <li>Children's content detection for COPPA compliance</li>
+        </ul>
+
+        <p><strong>Data Retention:</strong></p>
+        <ul>
+            <li>OpenAI processes data according to their <a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy Policy</a></li>
+            <li>No personal information is shared with OpenAI</li>
+            <li>Data is used solely for API processing and not for AI model training</li>
+        </ul>
+
+        <h2>Data Storage</h2>
+
+        <h3>Google Cloud Firestore</h3>
+        <p><strong>What We Store:</strong></p>
+        <ul>
+            <li>YouTube channel URLs</li>
+            <li>Channel names (publicly available)</li>
+            <li>Content categorization results (children's content vs. general audience)</li>
+            <li>Brand safety scores</li>
+            <li>Analysis timestamps</li>
+            <li>Impression data from DV360 reports (aggregate statistics)</li>
+        </ul>
+
+        <p><strong>Purpose:</strong></p>
+        <ul>
+            <li>Cache analysis results to reduce API costs and improve efficiency</li>
+            <li>Maintain historical records of analyzed channels</li>
+            <li>Generate cumulative targeting lists for advertising campaigns</li>
+        </ul>
+
+        <p><strong>Security:</strong></p>
+        <ul>
+            <li>Data is stored in Google Cloud Platform with enterprise-grade security</li>
+            <li>Access is restricted to authorized service accounts only</li>
+            <li>All data transmission uses HTTPS encryption</li>
+            <li>API credentials stored in Google Cloud Secret Manager</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>This application integrates with the following services:</p>
+
+        <ol>
+            <li><strong>Gmail API (Google)</strong>
+                <ul>
+                    <li>Purpose: Email retrieval and sending</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+            <li><strong>YouTube Data API (Google)</strong>
+                <ul>
+                    <li>Purpose: Retrieving public channel metadata</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+            <li><strong>OpenAI API</strong>
+                <ul>
+                    <li>Purpose: Content categorization and analysis</li>
+                    <li>Privacy Policy: <a href="https://openai.com/policies/privacy-policy" target="_blank">https://openai.com/policies/privacy-policy</a></li>
+                </ul>
+            </li>
+            <li><strong>Google Cloud Platform (Storage, Firestore, Cloud Functions)</strong>
+                <ul>
+                    <li>Purpose: Application hosting and data storage</li>
+                    <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Data Sharing</h2>
+        <div class="warning-box">
+            <strong>Important:</strong> No data is sold or shared with third parties for marketing purposes.
+        </div>
+
+        <ul>
+            <li>Data is only shared with service providers necessary for application functionality (Google Cloud, OpenAI)</li>
+            <li>All channel data analyzed is publicly available information</li>
+            <li>No personal user data is collected or processed</li>
+            <li>Analysis results are shared only with authorized Acquire NZ employees</li>
+        </ul>
+
+        <h2>User Rights and Control</h2>
+        <p>Authorized users have the right to:</p>
+        <ul>
+            <li>Revoke Gmail API access at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+            <li>Request deletion of all stored data</li>
+            <li>Export stored data</li>
+            <li>View what data has been collected</li>
+        </ul>
+
+        <h2>Data Retention Policy</h2>
+        <ul>
+            <li><strong>Email Data:</strong> Temporary files deleted immediately after processing (within 60 minutes)</li>
+            <li><strong>Firestore Cache:</strong> Retained indefinitely for cost optimization (can be cleared on request)</li>
+            <li><strong>Cloud Function Logs:</strong> Retained for 30 days (Google Cloud default)</li>
+            <li><strong>CSV Reports:</strong> Stored in Google Cloud Storage with signed URLs valid for 7 days</li>
+        </ul>
+
+        <h2>Security Measures</h2>
+        <ul>
+            <li>API credentials stored in Google Cloud Secret Manager (not in code)</li>
+            <li>Service accounts use principle of least privilege</li>
+            <li>HTTPS-only communication for all data transmission</li>
+            <li>Regular security updates to dependencies</li>
+            <li>OAuth 2.0 authentication for Gmail access</li>
+            <li>Cloud Function requires authentication (not publicly accessible)</li>
+            <li>Multi-factor authentication for admin access</li>
+        </ul>
+
+        <h2>Compliance</h2>
+        <p>This application:</p>
+        <ul>
+            <li>Only accesses publicly available YouTube channel information</li>
+            <li>Does not collect personal data from end users or viewers</li>
+            <li>Complies with YouTube API Terms of Service</li>
+            <li>Complies with Google API Services User Data Policy (including Limited Use requirements)</li>
+            <li>Uses Gmail API solely for authorized business email automation</li>
+            <li>Helps ensure advertiser compliance with COPPA regulations</li>
+        </ul>
+
+        <h2>YouTube API Disclosure</h2>
+        <p>This application uses YouTube API Services. By using this application, you are also agreeing to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a>.</p>
+
+        <h2>Google API Services User Data Policy Compliance</h2>
+        <p>This application's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <h2>Scope of Application</h2>
+        <p>This application is used by authorized Acquire NZ team members for advertising operations. The application does not interact with external users or collect data from YouTube viewers. Only authenticated and authorized users can access the application's functionality.</p>
+
+        <h2>Changes to Privacy Policy</h2>
+        <p>We reserve the right to update this privacy policy as needed. The "Last Updated" date at the top of this page will reflect when changes were made. Continued use of the application constitutes acceptance of any updates.</p>
+
+        <p>Material changes will be communicated to authorized users via email.</p>
+
+        <div class="contact-box">
+            <h2 style="margin-top: 0; border: none; padding: 0;">Contact Information</h2>
+            <p>For questions, concerns, or requests regarding this privacy policy or data handling:</p>
+
+            <p>
+                <strong>Organization:</strong> Acquire NZ<br>
+                <strong>Developer:</strong> Ash Sundaram<br>
+                <strong>Email:</strong> ashwinacquireonline@gmail.com<br>
+                <strong>Support Email:</strong> ashwin@acquirenz.com<br>
+                <strong>Application Homepage:</strong> <a href="index.html">DV360 Channel Analyzer</a>
+            </p>
+
+            <p style="margin-top: 20px;"><strong>Response Time:</strong> We aim to respond to all privacy-related inquiries within 48 hours.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 Acquire NZ. Advertising compliance and brand safety automation tool.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">Home</a> | <strong>Privacy Policy</strong>
+            </p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                Version 1.1.0 | For Authorized Users
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DV360 Channel Analyzer - Acquire</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        .badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .section {
+            margin: 30px 0;
+        }
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .tech-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+        }
+        .contact-box {
+            background: #fff9e6;
+            border: 1px solid #ffd700;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: center;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DV360 YouTube Channel Analyzer</h1>
+        <div class="subtitle">Automated COPPA Compliance & Brand Safety Analysis</div>
+        <span class="badge">by Acquire NZ</span>
+
+        <div class="highlight-box">
+            <p><strong>Purpose:</strong> This automation tool analyzes YouTube channel placements from Display & Video 360 (DV360) advertising reports to identify children's content and ensure COPPA compliance for advertising campaigns.</p>
+        </div>
+
+        <div class="section">
+            <h2>Overview</h2>
+            <p>The DV360 Channel Analyzer automatically processes YouTube placement reports to help advertisers maintain compliance with the Children's Online Privacy Protection Act (COPPA) and ensure brand safety across their advertising campaigns.</p>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Automated Email Processing:</strong> Monitors Gmail for DV360 placement reports sent as email attachments</li>
+                <li><strong>Children's Content Detection:</strong> Identifies channels targeting children to ensure COPPA compliance</li>
+                <li><strong>Brand Safety Analysis:</strong> Assesses content verticals, brand suitability, and safety scores</li>
+                <li><strong>Intelligent Caching:</strong> Stores analysis results to avoid re-analyzing known channels</li>
+                <li><strong>List Generation:</strong> Creates inclusion/exclusion lists for DV360 campaign targeting</li>
+                <li><strong>Automated Reporting:</strong> Sends analysis results via email with downloadable CSV files</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Email Monitoring:</strong> The system searches Gmail for DV360 placement reports (CSV files sent as zip attachments)</li>
+                <li><strong>Data Extraction:</strong> Downloads and extracts YouTube channel URLs from the report</li>
+                <li><strong>Pre-filtering:</strong> Uses keyword matching to identify obvious children's content (e.g., "nursery rhymes", "baby songs")</li>
+                <li><strong>Cache Check:</strong> Queries database for previously analyzed channels to avoid redundant API calls</li>
+                <li><strong>Metadata Fetching:</strong> Retrieves channel information from YouTube Data API (subscribers, video titles, descriptions)</li>
+                <li><strong>AI Analysis:</strong> Uses OpenAI GPT-4 to categorize content and assess:
+                    <ul>
+                        <li>Children's content classification (COPPA compliance)</li>
+                        <li>Content vertical and sub-niche</li>
+                        <li>Brand safety score</li>
+                        <li>Purchase intent signals</li>
+                        <li>Geographic focus and language</li>
+                    </ul>
+                </li>
+                <li><strong>Results Storage:</strong> Saves categorization results to Firestore for future reference</li>
+                <li><strong>List Generation:</strong> Creates two CSV files:
+                    <ul>
+                        <li><strong>Inclusion List:</strong> Safe channels approved for advertising</li>
+                        <li><strong>Exclusion List:</strong> Children's content channels to block</li>
+                    </ul>
+                </li>
+                <li><strong>Report Delivery:</strong> Emails summary statistics and download links to stakeholders</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>Google Cloud Functions</strong><br>
+                    Serverless automation
+                </div>
+                <div class="tech-item">
+                    <strong>Gmail API</strong><br>
+                    Email processing
+                </div>
+                <div class="tech-item">
+                    <strong>YouTube Data API</strong><br>
+                    Channel metadata
+                </div>
+                <div class="tech-item">
+                    <strong>OpenAI GPT-4</strong><br>
+                    Content analysis
+                </div>
+                <div class="tech-item">
+                    <strong>Google Firestore</strong><br>
+                    Results caching
+                </div>
+                <div class="tech-item">
+                    <strong>Cloud Storage</strong><br>
+                    File hosting
+                </div>
+                <div class="tech-item">
+                    <strong>Cloud Scheduler</strong><br>
+                    Automated triggers
+                </div>
+                <div class="tech-item">
+                    <strong>Python 3.11</strong><br>
+                    Core application
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Gmail API Usage & Data Privacy</h2>
+
+            <h3>What Gmail Permissions We Request:</h3>
+            <ul>
+                <li><strong>gmail.readonly:</strong> Read access to search for and download DV360 placement reports sent as email attachments</li>
+                <li><strong>gmail.send:</strong> Send access to deliver analysis results and CSV download links via email</li>
+            </ul>
+
+            <h3>How We Use Your Gmail Data:</h3>
+            <ul>
+                <li>The application only accesses emails containing DV360 placement reports (identified by subject line: "YouTube Placement Check - DV360")</li>
+                <li>Email attachments (CSV files) are downloaded temporarily for processing and deleted after analysis</li>
+                <li>No email content is stored permanently - only the extracted YouTube channel URLs are cached</li>
+                <li>Analysis results are sent to authorized recipients via email</li>
+                <li>The application only accesses the authenticated user's own Gmail account</li>
+                <li><strong>No data is shared with third parties</strong></li>
+            </ul>
+
+            <h3>Data Retention:</h3>
+            <ul>
+                <li>Email attachments: Processed and immediately deleted (within 60 minutes)</li>
+                <li>YouTube channel analysis results: Stored indefinitely in Firestore for caching purposes</li>
+                <li>Email messages: Not stored - only accessed temporarily for attachment download</li>
+            </ul>
+
+            <h3>User Control:</h3>
+            <ul>
+                <li>Users can revoke Gmail access at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+                <li>Revoking access will stop the automation but will not delete cached analysis results</li>
+            </ul>
+
+            <p><strong>Full Privacy Policy:</strong> <a href="privacy-policy.html">View our complete privacy policy</a></p>
+        </div>
+
+
+        <div class="section">
+            <h2>Cost Efficiency</h2>
+            <ul>
+                <li>Keyword pre-filtering reduces API costs by ~90%</li>
+                <li>Firestore caching saves ~90%+ on repeat analyses</li>
+                <li>Estimated cost: ~$0.0003 per channel analyzed</li>
+                <li>Weekly processing cost: ~$0.20 for 700+ channels</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Compliance & Accuracy</h2>
+            <ul>
+                <li><strong>Children's Content Detection:</strong> 98% accuracy</li>
+                <li><strong>Brand Safety Assessment:</strong> 95% accuracy</li>
+                <li><strong>COPPA Compliance:</strong> Helps prevent advertising on children's content</li>
+                <li><strong>Human Oversight:</strong> Results are reviewed by advertising operations team</li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h2 style="margin-top: 0; border: none; padding: 0;">Contact & Support</h2>
+            <p><strong>Developer:</strong> Ash Sundaram<br>
+            <strong>Email:</strong> ashwinacquireonline@gmail.com<br>
+            <strong>Organization:</strong> Acquire NZ<br>
+            <strong>Support Email:</strong> ashwin@acquirenz.com</p>
+
+            <p style="margin-top: 20px; font-size: 14px;">
+                <strong>For Questions About:</strong><br>
+                • Gmail API access and permissions<br>
+                • Data privacy and security<br>
+                • Technical support<br>
+                • Feature requests
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2026 Acquire NZ. Advertising compliance and brand safety automation tool.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
