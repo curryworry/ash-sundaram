@@ -1,0 +1,34 @@
+---
+const today = new Date();
+---
+
+<footer>
+	&copy; {today.getFullYear()} Ash Sundaram. All rights reserved.
+	<div class="footer-links">
+		<a href="/blog/">Blog</a>
+		<a href="/about/">About</a>
+		<a href="/tmdb-ratings-for-netflix-privacy-policy/">Privacy Policy</a>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+		flex-wrap: wrap;
+	}
+	.footer-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.footer-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>
